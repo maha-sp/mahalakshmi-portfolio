@@ -1,0 +1,23 @@
+body{
+font-family:Arial;
+}
+
+.hero{
+padding:120px 20px;
+background:#111;
+color:white;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.card{
+border:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
