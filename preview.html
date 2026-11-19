@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a35">
+  <meta name="description" content="Mahalakshmi S is a web developer specializing in WordPress, e-commerce websites, PHP, MySQL, responsive design and SEO.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mahalakshmi S | Web Developer & E-commerce Specialist">
+  <meta property="og:description" content="Explore the work, skills and professional experience of Mahalakshmi S.">
+  <title>Mahalakshmi S | Web Developer & E-commerce Specialist</title>
+  <style>
+    :root {
+      --bg: #f7f8fc; --surface: #fff; --ink: #15203c; --muted: #5b6780;
+      --line: #e4e8f1; --primary: #5144df; --primary-dark: #3e32b5;
+      --soft: #eeecff; --mint: #dff8ec; --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; background: var(--bg); color: var(--ink);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid #e0a83b; outline-offset: 5px; }
+    .skip { position: absolute; left: 10px; top: -100px; padding: 10px 18px; z-index: 20; background: white; }
+    .skip:focus { top: 12px; }
+    .container { width: min(1160px, calc(100% - 44px)); margin-inline: auto; }
+    .site-header { position: sticky; top: 0; z-index: 12; background: rgba(255,255,255,.94);
+      backdrop-filter: blur(15px); border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 75px; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 850; letter-spacing: -.03em; font-size: 1.13rem; }
+    .brand-mark { display: grid; place-items: center; width: 39px; height: 39px; border-radius: 13px;
+      color: white; background: var(--primary); font-size: .92rem; letter-spacing: -.06em; }
+    .nav-links { display: flex; align-items: center; gap: clamp(16px, 2vw, 31px); font-size: .91rem; font-weight: 650; }
+    .nav-links a:hover, .foot-links a:hover { color: var(--primary); }
+    .mobile-nav { display: none; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      padding: 13px 20px; border-radius: 13px; background: var(--primary); color: white;
+      font-size: .92rem; font-weight: 750; line-height: 1.3; box-shadow: 0 6px 14px rgba(81,68,223,.13); }
+    .button:hover { background: var(--primary-dark); transform: translateY(-1px); }
+    .button.secondary { background: white; color: var(--ink); border: 1px solid #d9deeb; box-shadow: none; }
+    .button.secondary:hover { background: var(--soft); }
+    .eyebrow { color: var(--primary); font-size: .77rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 850; }
+    .hero { padding: 102px 0 95px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0,1.06fr) minmax(300px,.94fr); gap: clamp(32px,6vw,75px); align-items: center; }
+    .status { display: inline-block; border: 1px solid #d9d4ff; background: #efedff; color: #5144c9;
+      border-radius: 999px; padding: 6px 12px; font-size: .75rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-size: clamp(2.7rem, 5.4vw, 4.9rem); line-height: 1.09; letter-spacing: -.057em; margin: 22px 0 22px; }
+    .gradient { color: var(--primary); }
+    .hero-intro { color: var(--muted); font-size: clamp(1.04rem,1.7vw,1.18rem); max-width: 600px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 29px; }
+    .hero-footnote { margin-top: 28px; color: #6e7690; font-size: .88rem; }
+    .hero-visual { position: relative; min-height: 455px; display: grid; place-items: center; }
+    .halo { position: absolute; width: 370px; height: 370px; background: radial-gradient(circle, #dedaff 0, #edf0ff 53%, transparent 71%);
+      filter: blur(3px); border-radius: 50%; }
+    .profile-card { position: relative; width: min(360px, 100%); min-height: 405px; border: 1px solid #e3e1f6; border-radius: 30px;
+      box-shadow: 0 30px 75px rgba(29,32,88,.13); background: linear-gradient(135deg,#fff 0%,#eeeaff 100%);
+      padding: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .portrait { display: grid; place-items: center; width: 184px; height: 184px; border-radius: 50%;
+      background: linear-gradient(145deg,#5247d9,#9c91f9); color: #fff; font-size: 4rem; font-weight: 900; letter-spacing: -.09em;
+      box-shadow: inset 0 0 0 11px rgba(255,255,255,.15), 0 14px 28px rgba(68,54,175,.24); }
+    .profile-card h2 { margin: 22px 0 0; font-size: 1.65rem; letter-spacing: -.04em; }
+    .profile-card p { margin: 3px 0 18px; color: var(--muted); }
+    .code-tag { background: #fff; padding: 8px 13px; border-radius: 10px; color: #5247c8; font-size: .85rem; font-weight: 800; border: 1px solid var(--line); }
+    .float-tag { position: absolute; right: -21px; top: 57px; padding: 10px 14px; border-radius: 12px;
+      background: #fff; box-shadow: 0 12px 25px rgba(45,47,88,.13); font-size: .78rem; font-weight: 800; }
+    .float-tag.bottom { right: auto; left: -23px; top: auto; bottom: 65px; }
+    section.content { padding: 84px 0; }
+    .section-heading { max-width: 760px; margin-bottom: 35px; }
+    .section-heading h2 { margin: 11px 0 10px; font-size: clamp(2rem,3.5vw,3rem); line-height: 1.18; letter-spacing: -.046em; }
+    .section-heading p { color: var(--muted); margin-bottom: 0; }
+    .about-grid { display: grid; grid-template-columns: 1fr .92fr; gap: 22px; }
+    .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 29px; }
+    .panel p:last-child { margin-bottom: 0; }
+    .panel h3 { margin-bottom: 12px; letter-spacing: -.02em; }
+    .lead { font-size: 1.05rem; color: #45516d; }
+    .metrics { display: grid; grid-template-columns: repeat(2,1fr); gap: 13px; }
+    .metric { padding: 23px; background: #fff; border: 1px solid var(--line); border-radius: 18px; }
+    .metric strong { display: block; font-size: 2rem; color: var(--primary); line-height: 1.1; letter-spacing: -.05em; }
+    .metric span { display: block; font-size: .86rem; color: #69738a; margin-top: 8px; }
+    .note { font-size: .78rem; color: #798298; margin: 13px 0 0; }
+    .skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .skill h3 { font-size: 1.02rem; margin-bottom: 18px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 9px; }
+    .chip { background: #f4f5fc; color: #42506d; padding: 8px 11px; border-radius: 10px; border: 1px solid #e8eaf5;
+      font-size: .83rem; font-weight: 700; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 19px; }
+    .project { display: flex; flex-direction: column; overflow: hidden; padding: 0; }
+    .project-art { display: flex; justify-content: space-between; align-items: flex-end; min-height: 172px;
+      padding: 21px; color: white; background: linear-gradient(135deg,#6252ef,#282b6c); }
+    .project:nth-child(2) .project-art { background: linear-gradient(135deg,#048a9c,#113960); }
+    .project:nth-child(3) .project-art { background: linear-gradient(135deg,#be6b9d,#513466); }
+    .project-art span { opacity: .8; font-weight: 850; letter-spacing: .1em; font-size: .75rem; }
+    .project-art strong { font-size: 2.65rem; line-height: 1; opacity: .8; }
+    .project-body { padding: 23px; display: flex; flex-direction: column; flex: 1; }
+    .project h3 { font-size: 1.23rem; line-height: 1.3; letter-spacing: -.035em; margin-bottom: 12px; }
+    .project p { color: var(--muted); font-size: .93rem; }
+    .project .chips { margin-top: auto; padding-top: 10px; }
+    .project .chip { font-size: .75rem; padding: 6px 9px; }
+    .project-outcome { color: var(--primary); font-size: .86rem; font-weight: 800; margin-top: 13px; }
+    .experience { display: grid; grid-template-columns: 240px 1fr; gap: 25px; }
+    .experience-date { color: var(--muted); font-weight: 700; padding-top: 4px; }
+    .experience h3 { margin: 0; font-size: 1.3rem; }
+    .company { color: var(--primary); font-weight: 800; margin: 4px 0 15px; }
+    .experience ul { margin: 0; padding-left: 22px; color: #536079; }
+    .experience li { margin: 8px 0; }
+    .education-card { display: flex; justify-content: space-between; gap: 25px; align-items: center; }
+    .education-card h3 { font-size: 1.28rem; margin-bottom: 7px; }
+    .education-card p { color: var(--muted); margin: 0; }
+    .edu-year { flex-shrink: 0; border-radius: 14px; background: var(--soft); color: var(--primary); padding: 12px 16px; font-weight: 800; }
+    .contact-box { background: linear-gradient(135deg,#191c4b,#4935ae); color: white;
+      padding: clamp(30px,6vw,57px); border-radius: 27px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+    .contact-box .eyebrow { color: #bcb9ff; }
+    .contact-box h2 { font-size: clamp(1.7rem, 3.3vw, 2.8rem); line-height: 1.2; letter-spacing: -.04em; margin: 10px 0; }
+    .contact-box p { color: #e0e1ff; max-width: 590px; margin-bottom: 0; }
+    .contact-actions { display: flex; flex-direction: column; gap: 10px; }
+    .contact-actions .button { background: white; color: #343090; }
+    .contact-actions .button.secondary { color: white; background: transparent; border-color: #827ac4; }
+    .site-footer { border-top: 1px solid var(--line); margin-top: 70px; padding: 26px 0; font-size: .85rem; color: var(--muted); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    .foot-links { display: flex; gap: 18px; font-weight: 700; }
+    @media (max-width: 930px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; gap: 26px; }
+      .float-tag { right: -5px; } .float-tag.bottom { left: -5px; }
+      .skills-grid { grid-template-columns: repeat(2,1fr); }
+      .project-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 720px) {
+      .nav { min-height: 65px; }
+      .nav-links { display: none; }
+      .mobile-nav { display: block; position: relative; }
+      .mobile-nav summary { list-style: none; border: 1px solid var(--line); border-radius: 11px; padding: 7px 12px;
+        font-size: .93rem; cursor: pointer; font-weight: 750; }
+      .mobile-nav summary::-webkit-details-marker { display: none; }
+      .mobile-nav[open] .mobile-list { position: absolute; top: 41px; right: 0; width: 210px;
+        background: white; box-shadow: 0 15px 35px #1e2a4830; border: 1px solid var(--line); border-radius: 13px; padding: 9px; }
+      .mobile-list a { display: block; padding: 10px; border-radius: 8px; font-weight: 650; }
+      .mobile-list a:hover { background: var(--soft); }
+      .hero { padding: 55px 0 55px; }
+      .hero-grid, .about-grid, .experience, .contact-box { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 400px; }
+      .profile-card { width: min(355px, calc(100% - 34px)); }
+      section.content { padding: 57px 0; }
+      .project-grid, .skills-grid { grid-template-columns: 1fr; }
+      .contact-actions { flex-direction: row; flex-wrap: wrap; }
+      .education-card { align-items: flex-start; }
+    }
+    @media (max-width: 420px) {
+      .container { width: min(100% - 30px, 1160px); }
+      .hero-visual { min-height: 365px; }
+      .profile-card { min-height: 350px; padding: 22px; }
+      .portrait { width: 150px; height: 150px; font-size: 3.25rem; }
+      .metrics { gap: 8px; } .metric { padding: 16px; }
+      .metric strong { font-size: 1.65rem; }
+      .education-card { flex-direction: column; }
+      .float-tag { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Mahalakshmi S, home"><span class="brand-mark">MS</span> Mahalakshmi S.</a>
+      <div class="nav-links">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+        <a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </div>
+      <details class="mobile-nav">
+        <summary>Menu ☰</summary>
+        <div class="mobile-list">
+          <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+          <a href="#experience">Experience</a><a href="#contact">Contact</a>
+        </div>
+      </details>
+    </nav>
+  </header>
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="status">Web Developer · WordPress · E-commerce</span>
+          <h1>Building better<br><span class="gradient">digital experiences.</span></h1>
+          <p class="hero-intro">Hi, I'm <strong>Mahalakshmi S</strong>, a web developer specializing in responsive websites, WordPress, e-commerce solutions, PHP, MySQL, and SEO. I turn practical business needs into polished, user-friendly websites.</p>
+          <div class="hero-actions">
+            <a class="button" href="#projects">Explore my projects <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" href="MahalakshmiS_resume.pdf" target="_blank" rel="noopener">View my resume ↓</a>
+          </div>
+          <p class="hero-footnote">Based in Chennai, India · Web development experience since 2023</p>
+        </div>
+        <div class="hero-visual" aria-label="Mahalakshmi profile illustration">
+          <div class="halo" aria-hidden="true"></div>
+          <div class="profile-card">
+            <span class="float-tag" aria-hidden="true">✦ WordPress & SEO</span>
+            <div class="portrait" aria-label="Mahalakshmi S initials">MS</div>
+            <h2>Mahalakshmi S</h2><p>Web Developer</p>
+            <span class="code-tag">&lt; build / optimize / grow &gt;</span>
+            <span class="float-tag bottom" aria-hidden="true">✧ PHP + MySQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="content">
+      <div class="container">
+        <div class="section-heading"><div class="eyebrow">01 / About</div>
+          <h2>Development meets business impact.</h2>
+          <p>My work combines hands-on engineering with an understanding of customer experience and website performance.</p>
+        </div>
+        <div class="about-grid">
+          <div class="panel">
+            <h3>A little about me</h3>
+            <p class="lead">I'm a website designer and developer at Imaje Technologies, focused on building, customizing, and optimizing websites and online stores.</p>
+            <p>My work spans frontend development, PHP/MySQL, WordPress customization, payment integrations, responsive user interfaces, and search-engine optimization. I enjoy improving both how a website looks and how well it works.</p>
+          </div>
+          <div>
+            <div class="metrics" aria-label="Reported project outcomes">
+              <div class="metric"><strong>25%</strong><span>Increase in mobile traffic</span></div>
+              <div class="metric"><strong>40%</strong><span>Increase in successful transactions</span></div>
+              <div class="metric"><strong>60%</strong><span>Faster data retrieval</span></div>
+              <div class="metric"><strong>20%</strong><span>Lower server load</span></div>
+            </div>
+            <p class="note">Selected outcomes reported in my resume across different projects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="content">
+      <div class="container">
+        <div class="section-heading"><div class="eyebrow">02 / Skills</div><h2>The tools I work with.</h2>
+          <p>A practical combination of development, e-commerce, design, analytics, and marketing tools.</p></div>
+        <div class="skills-grid">
+          <article class="panel skill"><h3>Frontend</h3><div class="chips"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span><span class="chip">Bootstrap</span><span class="chip">Responsive Design</span></div></article>
+          <article class="panel skill"><h3>Backend & APIs</h3><div class="chips"><span class="chip">PHP</span><span class="chip">.NET</span><span class="chip">REST APIs</span><span class="chip">Third-party Integrations</span></div></article>
+          <article class="panel skill"><h3>Databases</h3><div class="chips"><span class="chip">MySQL</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span></div></article>
+          <article class="panel skill"><h3>CMS & E-commerce</h3><div class="chips"><span class="chip">WordPress</span><span class="chip">Theme Customization</span><span class="chip">E-commerce Websites</span><span class="chip">Payment Integration</span></div></article>
+          <article class="panel skill"><h3>SEO & Analytics</h3><div class="chips"><span class="chip">On-Page SEO</span><span class="chip">Off-Page SEO</span><span class="chip">Google Analytics</span><span class="chip">Search Console</span><span class="chip">Google Ads</span><span class="chip">Merchant Center</span></div></article>
+          <article class="panel skill"><h3>Design & Workflow</h3><div class="chips"><span class="chip">Adobe Photoshop</span><span class="chip">Canva</span><span class="chip">Git</span><span class="chip">Bitbucket</span><span class="chip">VS Code</span></div></article>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="content">
+      <div class="container">
+        <div class="section-heading"><div class="eyebrow">03 / Projects</div><h2>Selected projects and outcomes.</h2>
+          <p>Examples summarized from my professional resume. Client work is described without publishing private code or screenshots.</p></div>
+        <div class="project-grid">
+          <article class="panel project">
+            <div class="project-art" aria-hidden="true"><span>ECOMMERCE / DEVELOPMENT</span><strong>01</strong></div>
+            <div class="project-body"><h3>Responsive E-commerce Platform</h3>
+              <p>Developed a mobile-friendly online shopping experience and integrated Stripe, PayPal, and RESTful APIs to support smooth transactions and faster data access.</p>
+              <p class="project-outcome">+25% mobile traffic · +40% successful transactions</p>
+              <div class="chips"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span><span class="chip">REST APIs</span></div>
+            </div>
+          </article>
+          <article class="panel project">
+            <div class="project-art" aria-hidden="true"><span>PLATFORM / OPTIMIZATION</span><strong>02</strong></div>
+            <div class="project-body"><h3>Scam & Spam Information Platform</h3>
+              <p>Redesigned the user interface and optimized PHP/MySQL-backed functionality to improve engagement and reduce server load.</p>
+              <p class="project-outcome">+25% user engagement · −20% server load</p>
+              <div class="chips"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span><span class="chip">PHP</span><span class="chip">MySQL</span></div>
+            </div>
+          </article>
+          <article class="panel project">
+            <div class="project-art" aria-hidden="true"><span>WEB DESIGN / INTEGRATIONS</span><strong>03</strong></div>
+            <div class="project-body"><h3>Modeling & Transport Platforms</h3>
+              <p>Updated website pages and connected third-party APIs to improve the experience across front-end and back-end functionality.</p>
+              <p class="project-outcome">15% reduction in bounce rate</p>
+              <div class="chips"><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span><span class="chip">API Integration</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="experience" class="content">
+      <div class="container">
+        <div class="section-heading"><div class="eyebrow">04 / Experience</div><h2>Professional experience.</h2></div>
+        <div class="panel experience">
+          <div class="experience-date">July 2023 – Present</div>
+          <div><h3>Website Designer & Developer</h3>
+            <p class="company">Imaje Technologies · Chennai</p>
+            <ul>
+              <li>Develop and customize responsive WordPress and e-commerce websites.</li>
+              <li>Optimize website structure, usability, performance, and SEO.</li>
+              <li>Build or integrate frontend features, backend functionality, and third-party APIs.</li>
+              <li>Maintain Google Merchant Center shopping feeds and work with Google Ads and analytics tools.</li>
+              <li>Collaborate with designers and project managers to deliver client-focused solutions.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="education" class="content">
+      <div class="container">
+        <div class="section-heading"><div class="eyebrow">05 / Education</div><h2>Academic background.</h2></div>
+        <div class="panel education-card">
+          <div><h3>B.E. in Computer Science & Engineering</h3>
+            <p>Pavendar Bharathidasan College of Engineering & Technology</p>
+            <p>CGPA: 7.98</p>
+          </div>
+          <span class="edu-year">2017 – 2021</span>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="content">
+      <div class="container">
+        <div class="contact-box">
+          <div><div class="eyebrow">06 / Contact</div><h2>Let's build something useful.</h2>
+            <p>Interested in a website, an e-commerce project, or working together? Reach out by email or connect with me on LinkedIn.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="button" href="mailto:mahalakshmics99@gmail.com">Email me ↗</a>
+            <a class="button secondary" href="https://www.linkedin.com/in/mahacs" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> Mahalakshmi S. Built with HTML, CSS & JavaScript.</span>
+      <div class="foot-links"><a href="https://github.com/maha-sp" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/mahacs" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#home">Back to top ↑</a></div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('.mobile-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        const menu = document.querySelector('.mobile-nav');
+        if (menu) menu.open = false;
+      });
+    });
+  </script>
+</body>
+</html>
